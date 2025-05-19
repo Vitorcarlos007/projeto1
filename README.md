@@ -8,8 +8,32 @@ int main() {
     int diado_nascimento1;
     int aniversario1, aniversario2;
     float peso1, peso2;
+    int opcao;
 
-    // Dados da primeira pessoa
+    // Exibe menu
+    printf("Menu Principal\n");
+    printf("1. Iniciar cadastro\n");
+    printf("2. Sair\n");
+
+    // Lê a opção do usuário
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1: 
+            printf("Iniciando cadastro...\n");
+            break;
+
+        case 2:
+            printf("Saindo do programa...\n");
+            return 0; // Encerra o programa aqui
+
+        default:
+            printf("Opção inválida. Tente novamente.\n");
+            return 1; // Também encerra, já que opção inválida
+    }
+
+    // Cadastro da primeira pessoa
     printf("Digite o primeiro nome: ");
     scanf("%s", nome1);
 
@@ -28,7 +52,7 @@ int main() {
     printf("Digite o seu peso: ");
     scanf("%f", &peso1);
 
-    // Dados da segunda pessoa
+    // Cadastro da segunda pessoa
     printf("Digite o segundo nome: ");
     scanf("%s", nome2);
 
@@ -64,4 +88,3 @@ int main() {
 
     return 0;
 }
-
